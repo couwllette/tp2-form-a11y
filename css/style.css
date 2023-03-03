@@ -74,3 +74,25 @@ h3{
 .type{
     display: block;
 }
+
+.icone {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background-image: url("../images/icones/good-warning-error.png");
+    background-size: cover;
+    position: relative;
+    top: 3px;
+}
+
+/* .icone--ok {
+    background-position: 0 0;
+} */
+
+/* .icone--avertissement {
+    background-position: 49px 0;
+} */
+
+.icone--erreur {
+    background-position: 95px 0;
+}

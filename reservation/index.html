@@ -27,12 +27,16 @@
 
             <fieldset class="form-section">
 
-                <legend><h2>1. Vérifier la disponibilité</h2></legend>
+                <legend>
+                    <h2>1. Vérifier la disponibilité</h2>
+                </legend>
 
                 <div class="disponibilite-dates">
 
                     <fieldset class="deuxieme-fieldset">
-                        <legend><h3>Date d'arrivée:</h3></legend>
+                        <legend>
+                            <h3>Date d'arrivée:</h3>
+                        </legend>
                         <div class="disponibilite-date">
                             <p>
                                 <label for="jour-arrivee">jour</label>
@@ -98,12 +102,20 @@
                                     <option value="2025">2025</option>
                                 </select>
                             </p>
-                            <p class="erreur"> Ceci est un message d'erreur</p>
+                            <p class="erreur">
+                                <span>
+                                    <span class="screen-reader-only">Avertissement</span>
+                                    <span class="icone icone--erreur" aria-hidden="true"></span>
+                                </span>
+                                Ceci est un message d'erreur
+                            </p>
                         </div>
                     </fieldset>
 
                     <fieldset class="deuxieme-fieldset">
-                        <legend><h3>Date de départ:</h3></legend>
+                        <legend>
+                            <h3>Date de départ:</h3>
+                        </legend>
                         <div class="disponibilite-date">
                             <p>
                                 <label for="jour-arrivee">jour</label>
@@ -169,7 +181,13 @@
                                     <option value="2025">2025</option>
                                 </select>
                             </p>
-                            <p class="erreur"> Ceci est un message d'erreur</p>
+                            <p class="erreur">
+                                <span>
+                                    <span class="screen-reader-only">Avertissement</span>
+                                    <span class="icone icone--erreur" aria-hidden="true"></span>
+                                </span>
+                                Ceci est un message d'erreur
+                            </p>
                         </div>
                     </fieldset>
 
@@ -181,18 +199,32 @@
 
             <fieldset class="form-section">
 
-                <legend> <h2>2. Nombre de personnes</h2> </legend>
+                <legend>
+                    <h2>2. Nombre de personnes</h2>
+                </legend>
 
                 <p>
                     <label>Adultes (maximum 4):</label>
                     <input type="number" id="adultes" name="adultes" max="4" min="1" required>
                 </p>
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Ceci est un message d'erreur
+                </p>
                 <p>
                     <label>Enfants (maximum 5):</label>
                     <input type="number" id="enfants" name="enfants" max="5" min="0" required>
                 </p>
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Ceci est un message d'erreur
+                </p>
 
                 <p>
                     Notes: <br>
@@ -203,21 +235,25 @@
             </fieldset>
 
             <fieldset class="form-section">
-                <legend> <h2>3. Choix chambre et forfait</h2> </legend>
+                <legend>
+                    <h2>3. Choix chambre et forfait</h2>
+                </legend>
 
                 <ul class="liste-type-chambre">
                     <li>
                         <input type="radio" id="simple" name="typeChambre" value="simple" class="screen-reader-only"
                             required>
                         <label for="simple">
-                            <img src="../images/types-de-chambre/1-lit-double.webp" alt='un lit simple dans une chambre'>
+                            <img src="../images/types-de-chambre/1-lit-double.webp"
+                                alt='un lit simple dans une chambre'>
                             <span class="type">Type de chambre simple</span>
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="double" name="typeChambre" value="double" class="screen-reader-only">
                         <label for="double">
-                            <img src="../images/types-de-chambre/2-lits-double.jpg" alt="deux lits doubles dans une chambre d'hotel">
+                            <img src="../images/types-de-chambre/2-lits-double.jpg"
+                                alt="deux lits doubles dans une chambre d'hotel">
                             <span class="type">Type de chambre double</span>
                         </label>
                     </li>
@@ -225,13 +261,20 @@
                         <input type="radio" id="familiale" name="typeChambre" value="familiale"
                             class="screen-reader-only">
                         <label for="familiale">
-                            <img src="../images/types-de-chambre/chambre-familiale.jpg" alt="un grand lit avec un lit superposé dans une chambre">
+                            <img src="../images/types-de-chambre/chambre-familiale.jpg"
+                                alt="un grand lit avec un lit superposé dans une chambre">
                             <span class="type">Type de chambre familiale</span>
                         </label>
                     </li>
                 </ul>
 
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Ceci est un message d'erreur
+                </p>
 
                 <p>
                     <input type="checkbox" id="dejeuner" name="dejeuner">
@@ -245,32 +288,67 @@
             </fieldset>
 
             <fieldset class="form-section">
-                <legend> <h2>4. Identification</h2> </legend>
+                <legend>
+                    <h2>4. Identification</h2>
+                </legend>
 
-                <p>
-                    <label>Prénom :</label>
-                    <input type="text" id="prenom" name="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
-                </p>
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                <div class="ctnValidation">
+                    <p>
+                        <label>Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Ceci est un message d'erreur
+                    </p>
+                </div>
+                <div class="ctnValidation">
+                    <p>
+                        <label>Nom :</label>
+                        <input type="text" id="nom" name="nom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Ceci est un message d'erreur
+                    </p>
 
-                <p>
-                    <label>Nom :</label>
-                    <input type="text" id="nom" name="nom" pattern="[a-zA-ZÀ-ÿ \-]+" required>
-                </p>
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                </div>
 
-                <p>
-                    <label>Email :</label>
-                    <input type="email" id="email" name="email" required>
-                </p>
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                <div class="ctnValidation">
+                    <p>
+                        <label>Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Ceci est un message d'erreur
+                    </p>
 
-                <p>
-                    <label>Téléphone :</label>
-                    <input type="tel" id="telephone" name="telephone" required>
-                </p>
-                <p class="erreur"> Ceci est un message d'erreur</p>
+                </div>
+                <div class="ctnValidation">
+                    <p>
+                        <label>Téléphone :</label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Ceci est un message d'erreur
+                    </p>
 
+                </div>
+                
             </fieldset>
 
             <p><button type="submit">Confirmer la réservation</button></p>
