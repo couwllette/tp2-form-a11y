@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/**
+ * TABLE DES MATIERES
+ *
+ * Normalize (au lieu du reset)
+ * Utilitaires
+ * Grille 12 colonnes
+ * Typographie
+ * Styles de base
+ */
+
+/* Normalize (reset qui harmonise le rendu des éléments de formulaire)
+   ========================================================================== */
+   @import url(normalize.css);
+
+   /* Utilitaires (contient box-sising = border-box et autres utiles)
+      ========================================================================== */
+   @import url(utilitaires.css);
+   
+   /* Grille 12 colonnes (jeu de classes : conteneur, rangee, cols_X_de_12)
+      ========================================================================== */
+   @import url(grille.css);
+   
+   /* Typographie */
+
+   @import url(typo.css);
+   
+   /* Styles de base
+      ========================================================================== */
+
+    .liste-type-chambre{
+        list-style: none;
+    }
+
+    /*** Label des boutons radio ***/
+/* le sélecteur met à profit
+le fait que le label est consécutif
+au input (cas des boutons radio et des cases à cocher)
+ */
+input[type=radio]+label {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+/*** Interactivité ***/
+[type=radio]:hover+label {
+    cursor: pointer;
+}
+
+[type=radio]:hover+label,
+[type=radio]:focus+label {
+    border: 2px solid #09c231;
+}
+
+[type=radio]:checked+label{
+    border: 2px solid #068221;
+}
