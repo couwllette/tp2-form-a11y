@@ -12,20 +12,44 @@
 </head>
 
 <body>
-    <header>
+    <a href="#contenu" class="screen-reader-only focusable">Aller au contenu</a>
+
+    <header role="banner">
+
         <a href="../index.html">
             <p><img src="../images/logo-jacana.png" alt="" width="50%"></p>
             <p class="titre">Auberge du jacana africain</p>
         </a>
-        <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
-        <p> <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
+
+        <nav role="navigation" class="nav"> 
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="../index.html" class="nav__link">Accueil</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#" class="nav__link">Historique</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#" class="nav__link">Région</a>
+                </li>
+                <!-- remarquer que .nav__link--active est le modificateur de .nav__link
+            pour mettre en valeur l'item de menu courant -->
+                <li class="nav__list-item">
+                    <a href="index.html" class="nav__link nav__link--active">Réservation</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        
     </header>
 
-    <main>
+    <main id="contenu">
         <h1>Réservation</h1>
         <form id="reservation-form" action="reservation.html" method="get">
 
-            <fieldset class="form-section">
+            <fieldset class="form-section disponibilite">
 
                 <legend>
                     <h2>1. Vérifier la disponibilité</h2>
@@ -197,7 +221,7 @@
 
             </fieldset>
 
-            <fieldset class="form-section">
+            <fieldset class="form-section nombres-personnes">
 
                 <legend>
                     <h2>2. Nombre de personnes</h2>
@@ -234,7 +258,7 @@
 
             </fieldset>
 
-            <fieldset class="form-section">
+            <fieldset class="form-section forfait">
                 <legend>
                     <h2>3. Choix chambre et forfait</h2>
                 </legend>
@@ -275,19 +299,22 @@
                     </span>
                     Ceci est un message d'erreur
                 </p>
-
+            </fieldset>
+            <div class="case-a-cocher">
                 <p>
                     <input type="checkbox" id="dejeuner" name="dejeuner">
                     <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
                 </p>
 
                 <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
-                    12.50$
-                    CAN.</p>
+                    12.50$ CAN.
+                </p>
+            </div>
+                
 
-            </fieldset>
+            
 
-            <fieldset class="form-section">
+            <fieldset class="form-section identification">
                 <legend>
                     <h2>4. Identification</h2>
                 </legend>
@@ -336,8 +363,8 @@
                 </div>
                 <div class="ctnValidation">
                     <p>
-                        <label>Téléphone :</label>
-                        <input type="tel" id="telephone" name="telephone" required>
+                        <label >Téléphone : </label>
+                        <input type="tel" id="telephone" name="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Exemple: 111-555-333" required>
                     </p>
                     <p class="erreur">
                         <span>
@@ -357,19 +384,27 @@
 
     </main>
     <hr>
-    <aside>
+    <aside role="complementary">
         <h2>Nous joindre</h2>
-        <h3>aubergedujacana@gmail.com</h3>
+        
         <p>
             Pour toutes demandes d’information, ou pour faire une demande de réservation pour l’un de nos chalets,
             remplisser le formulaire ci-contre.
+        </p>
+
+        <p>
             Si vous préférez, vous pouvez nous contacter par courriel.
             Afin d’assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
             que le nombre de personnes (adultes et enfants) qui y séjourneront.
-
         </p>
+
+        <address>
+            <a href="mailto:aubergedujacana@gmail.com">aubergedujacana@gmail.com</a>
+        </address>
+
     </aside>
-    <footer>
+    <footer role="contentinfo">
+
         <!-- Intégrer les medias sociaux instagram et facebook + un bouton pour partager cette page -->
         <p>
             Ce site Web est un projet pédagogique réalisé par
@@ -379,6 +414,9 @@
             <a href="">Cégep de Sainte-Foy</a>.
         </p>
     </footer>
-</body>
 
+    <script src="../js/menu.js"></script>
+    
+</body>
+ 
 </html>
