@@ -1,13 +1,19 @@
 
+/* .nav{
+    background-color: rgb(160, 160, 160);
+} */
+
 /* Bouton du menu */
 .nav__control {
     background-color: var(--couleur-bouton);
 
-    border: none;
+    border: solid 1px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     min-width: 40px;
 
-    float: right;
+    float: left;
 }
 
 @media (min-width: 600px) {
@@ -19,6 +25,7 @@
 .nav__control:hover,
 .nav__control:active {
     background-color: var(--nav-hover-background-color);
+    cursor: pointer;
 }
 
 .nav__control:focus {
@@ -57,15 +64,16 @@
     .nav__list-item {
         display: inline-block;
         flex-basis: 20%;
-        margin: 0 0.5rem;
+        margin: 0;
         text-align: center;
+        border: solid 0.5px black;
     }
 }
 
 /* Liens du menu */
 .nav__link {
-    color: var(--nav-color);
-    background-color: rgba(145, 0, 145, 0.2);
+    font-size: 1.7rem;
+    background-color: rgba(203, 203, 203, 0.622);
     display: block;
     padding: 5px 10px;
     width: 100%;
@@ -73,12 +81,13 @@
 
 .nav__link:link,
 .nav__link:visited {
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
 .nav__link:hover {
     color: #fff;
-    background-color: var(--nav-hover-background-color);
+    background-color: rgb(0, 48, 25);;
 }
 
 .nav__link:active {

@@ -51,17 +51,56 @@ input[type=radio]+label {
 }
 
 /*** Interactivité ***/
-[type=radio]:hover+label {
+    [type=radio]:hover+label {
     cursor: pointer;
 }
 
-[type=radio]:hover+label,
+/* [type=radio]:hover+label,
 [type=radio]:focus+label {
     border: 2px solid #09c231;
 }
 
 [type=radio]:checked+label {
     border: 2px solid #068221;
+} */ 
+
+.forfait .row {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .forfait .row {
+        display: flex;
+    }
+}
+
+.forfait__li {
+    flex-basis: 33%;
+    margin: 0.25rem;
+}
+
+.forfait__li img {
+    filter: grayscale();
+}
+
+.forfait__li [type="radio"]+label {
+    display: block;
+    padding: 1rem;
+}
+
+.forfait__li [type="radio"]:focus+label,
+.forfait__li [type="radio"]:checked+label {
+    background-color: rgb(193, 193, 193);
+    font-weight: bold;
+}
+
+.forfait__li [type="radio"]:focus+label img,
+.forfait__li [type="radio"]:checked+label img,
+.forfait__li [type="radio"]:hover+label img {
+    filter: none;
 }
 
 .erreur {
@@ -101,4 +140,79 @@ h3{
 
 .icone--erreur {
     background-position: 95px 0;
+}
+
+footer{
+    background-color: rgb(217, 217, 217);
+}
+
+.footer{
+    padding: 0 5px;
+}
+
+.logo{
+    width: 20%;
+    margin: 5px 0 0 0;
+}
+
+.titre_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+}
+
+.titre{
+    font-size: 2rem;
+    margin: 0 0 5 0;
+    text-align: center;
+}
+
+a:link,
+a:visited {
+  color: rgb(3, 89, 48);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover,
+a:active {
+  color: rgb(0, 47, 20);
+  text-decoration: underline;
+}
+
+.titre_logo:link,
+.titre_logo:visited {
+  color: rgb(0, 48, 25);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.titre_logo:hover,
+.titre_logo:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 48, 25);
+  text-decoration: none;
+}
+
+.button {
+    background-color: rgb(0, 48, 25);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+form .button:hover {
+    background-color: white;
+    border: solid 1px rgb(0, 48, 25);
+    color: rgb(0, 48, 25);
+}
+
+
+.case-a-cocher{
+    background-color: lightgray;
+    padding: 10px;
 }
