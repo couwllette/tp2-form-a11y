@@ -1,13 +1,14 @@
 
-/* .nav{
-    background-color: rgb(160, 160, 160);
-} */
+.nav{
+    background-color: rgb(203, 203, 203);
+}
 
 /* Bouton du menu */
 .nav__control {
-    background-color: var(--couleur-bouton);
+    background-color: rgba(203, 203, 203);
 
-    border: solid 1px black;
+    font-weight: bold;
+    border: none;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -24,7 +25,8 @@
 
 .nav__control:hover,
 .nav__control:active {
-    background-color: var(--nav-hover-background-color);
+    color: rgb(0, 48, 25);
+    border: solid 1px black;
     cursor: pointer;
 }
 
@@ -41,7 +43,7 @@
      * de modifier l'apparence du outline par défaut des navigateurs.
      */
     outline-offset: -5px;
-    outline: var(--nav-background-color) auto 5px;
+    outline: black auto 5px;
 }
 
 /* Liste du menu */
@@ -56,7 +58,7 @@
 @media (min-width: 600px) {
     .nav__list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         max-width: 1000px;
         margin: auto;
     }
@@ -66,14 +68,14 @@
         flex-basis: 20%;
         margin: 0;
         text-align: center;
-        border: solid 0.5px black;
+        /* border: solid 0.5px black; */
     }
 }
 
 /* Liens du menu */
 .nav__link {
     font-size: 1.7rem;
-    background-color: rgba(203, 203, 203, 0.622);
+    background-color: rgba(203, 203, 203);
     display: block;
     padding: 5px 10px;
     width: 100%;
@@ -92,13 +94,13 @@
 
 .nav__link:active {
     color: #fff;
-    background-color: magenta;
+    background-color: rgb(0, 0, 0);
 }
 
 
 .nav__link:focus {
     outline-offset: -5px;
-    outline: var(--nav-background-color) auto 5px;
+    outline: black auto 5px;
     box-shadow: none;
 }
 
@@ -113,13 +115,13 @@
     pour l'item de menu actif
     **/
 .nav__link--active {
-    border-left: 5px solid var(--nav-border-color);
+    border-left: 5px solid rgb(0,48,25);
 }
 
 @media (min-width: 600px) {
     .nav__link--active {
         border-left: none;
-        border-bottom: 5px solid var(--nav-border-color);
+        border-bottom: 5px solid rgb(0,48,25);
     }
 }
 
