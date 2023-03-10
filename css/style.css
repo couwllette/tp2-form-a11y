@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
+
+
 /**
+ * @author Cloé Ouellette <2265264@csfoy.ca>
  * TABLE DES MATIERES
  *
  * Normalize (au lieu du reset)
@@ -39,11 +42,40 @@
     list-style: none;
 }
 
+/* fieldset - disponibilité */
+.deuxieme-fieldset {
+    border: none;
+}
+
+h3 {
+    margin: 0;
+}
+
+h1 {
+    color: rgb(0, 48, 25);
+    border-bottom-style: double;
+    text-align: center;
+    background-color: rgba(0, 117, 60, 0.179);
+    max-width: 90%;
+    margin: 10px auto 0 auto;
+}
+
+a:link,
+a:visited {
+    color: rgb(3, 89, 48);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover,
+a:active {
+    color: rgb(0, 47, 20);
+    text-decoration: underline;
+}
+
+
 /*** Label des boutons radio ***/
-/* le sélecteur met à profit
-le fait que le label est consécutif
-au input (cas des boutons radio et des cases à cocher)
- */
+
 input[type=radio]+label {
     display: inline-block;
     text-align: center;
@@ -55,14 +87,18 @@ input[type=radio]+label {
     cursor: pointer;
 }
 
-/* [type=radio]:hover+label,
-[type=radio]:focus+label {
-    border: 2px solid #09c231;
+/* FORFAIT CHAMBRES */
+
+.type {
+    display: block;
 }
 
-[type=radio]:checked+label {
-    border: 2px solid #068221;
-} */
+.case-a-cocher {
+    background-color: rgb(202, 227, 196);
+    padding: 10px;
+}
+
+/* forfait -btn radios */
 
 .forfait .row {
     display: block;
@@ -104,21 +140,12 @@ input[type=radio]+label {
     filter: none;
 }
 
+
+/* MESSAGE ERREUR */
+
 .erreur {
     color: red;
     font-size: 1rem;
-}
-
-.deuxieme-fieldset {
-    border: none;
-}
-
-h3 {
-    margin: 0;
-}
-
-.type {
-    display: block;
 }
 
 .icone {
@@ -131,26 +158,13 @@ h3 {
     top: 3px;
 }
 
-/* .icone--ok {
-    background-position: 0 0;
-} */
-
-/* .icone--avertissement {
-    background-position: 49px 0;
-} */
-
 .icone--erreur {
     background-position: 95px 0;
 }
 
-footer {
-    background-color: rgb(217, 217, 217);
-}
 
-.footer {
-    padding: 25px 5px;
-    font-size: 1.2rem;
-}
+
+/* ENTETE - LOGO */
 
 .logo {
     width: 20%;
@@ -187,19 +201,6 @@ footer {
     }
 }
 
-a:link,
-a:visited {
-    color: rgb(3, 89, 48);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover,
-a:active {
-    color: rgb(0, 47, 20);
-    text-decoration: underline;
-}
-
 .titre_logo:link,
 .titre_logo:visited {
     color: rgb(255, 255, 255);
@@ -208,12 +209,20 @@ a:active {
     text-transform: uppercase;
 }
 
-/* .titre_logo:hover,
-.titre_logo:active {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 48, 25);
-    text-decoration: none;
-} */
+/* FOOTER */
+
+footer {
+    background-color: rgb(217, 217, 217);
+}
+
+.footer {
+    padding: 25px 5px;
+    font-size: 1.2rem;
+}
+
+
+
+/* BOUTONS */
 
 .button {
     background-color: rgb(0, 48, 25);
@@ -231,14 +240,6 @@ form .button:hover {
     color: rgb(0, 48, 25);
 }
 
-
-.case-a-cocher {
-    background-color: rgb(202, 227, 196);
-    padding: 10px;
-}
-
-
-
 .button-confirmation {
     margin: 15px auto;
 }
@@ -246,8 +247,6 @@ form .button:hover {
 .button-disponibilite {
     margin: 15px 10px;
 }
-
-
 
 
 @media(min-width:600px) {
@@ -267,19 +266,3 @@ form .button:hover {
     }
 
 }
-
-h1 {
-    color: rgb(0, 48, 25);
-    border-bottom-style: double;
-    text-align: center;
-    background-color: rgba(0, 117, 60, 0.179);
-    max-width: 90%;
-    margin: 10px auto 0 auto;
-}
-
-/* @media(max-width:599px){
-    h1{
-        max-width: 80%;
-        margin: 10px auto;
-    }
-} */
